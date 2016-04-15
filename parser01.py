@@ -1,13 +1,9 @@
 #!/usr/bin/python
 
-<<<<<<< HEAD
-f = open('./test.xmi','r');
-=======
 # from printing import print_dict;
 import disp
 
-f = open('/home/sujit/Downloads/thermoclass(1).xmi','r');
->>>>>>> 45edcaff703f52b86aeed6a126a1df4f8f659db4
+f = open('./check.xmi','r');
 
 s=[]
 t=[]
@@ -90,7 +86,6 @@ for i in t:
     Actor[i[xmi_id_start+xmi_id_len :z-1]] = i[xmi_name_start + xmi_name_len: y ]
     # print i[xmi_name_start + xmi_name_len: y+2]
 
-<<<<<<< HEAD
 print 'actor : ',Actor
 
 
@@ -158,15 +153,14 @@ for gg in s:
                 break
             q+=1
         #for dependency only adding edge from client to supplier hence making only one entry in adjacency list i.e in client adjacency list
-        print "client "+line[start_first+client_len:p-1]
-        print "supplier "+line[start_second+supplier_len:q-1]
         if(line[start_first+client_len:p-1] in Adj):
             Adj[line[start_first+client_len:p-1]].append(line[start_second+supplier_len:q-1])
         else:
             Adj[line[start_first+client_len:p-1]]=[line[start_second+supplier_len:q-1]]
     i+=1
-
+print ""
+print "*************************************"
 print 'Adjacency list: ',Adj
-=======
+print "*************************************"
 disp.print_dict(Actor)
->>>>>>> 45edcaff703f52b86aeed6a126a1df4f8f659db4
+
