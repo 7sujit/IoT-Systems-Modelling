@@ -21,7 +21,7 @@ def generate_graphml(graph):
     f = open('./file.graphml','w');
     if(f is None):
         print 'Error'
-        pass
+        return
     f.write(docHeaderTag)
     f.write(docStartTag)
     for i in graph.keys():
@@ -30,3 +30,11 @@ def generate_graphml(graph):
         for j in graph[i]:
         	f.write(create_edge('0', i, j , 'xx'))
     f.write(docEndTag)
+
+
+
+def main():
+    print 'Python Module for GraphML file generator'
+
+if __name__ == '__main__':
+    main()
