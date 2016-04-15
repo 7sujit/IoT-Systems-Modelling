@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+# from printing import print_dict;
+import disp
+
 f = open('/home/sujit/Downloads/thermoclass(1).xmi','r');
 
 s=[]
@@ -48,7 +51,7 @@ for i in t:
     # print i[xmi_name_start + xmi_name_len: y+2]
 
 
-print 'usecase :', UseCase
+disp.print_dict(UseCase)
 
 t = []
 for i in s:
@@ -82,4 +85,4 @@ for i in t:
     Actor[i[xmi_id_start+xmi_id_len :z-1]] = i[xmi_name_start + xmi_name_len: y ]
     # print i[xmi_name_start + xmi_name_len: y+2]
 
-print 'actor : ',Actor
+disp.print_dict(Actor)
