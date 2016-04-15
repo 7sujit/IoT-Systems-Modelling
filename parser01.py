@@ -1,6 +1,13 @@
 #!/usr/bin/python
 
+<<<<<<< HEAD
 f = open('./test.xmi','r');
+=======
+# from printing import print_dict;
+import disp
+
+f = open('/home/sujit/Downloads/thermoclass(1).xmi','r');
+>>>>>>> 45edcaff703f52b86aeed6a126a1df4f8f659db4
 
 s=[]
 t=[]
@@ -49,7 +56,7 @@ for i in t:
     # print i[xmi_name_start + xmi_name_len: y+2]
 
 
-print 'usecase :', UseCase
+disp.print_dict(UseCase)
 
 t = []
 for i in s:
@@ -83,6 +90,7 @@ for i in t:
     Actor[i[xmi_id_start+xmi_id_len :z-1]] = i[xmi_name_start + xmi_name_len: y ]
     # print i[xmi_name_start + xmi_name_len: y+2]
 
+<<<<<<< HEAD
 print 'actor : ',Actor
 
 
@@ -159,3 +167,6 @@ for gg in s:
     i+=1
 
 print 'Adjacency list: ',Adj
+=======
+disp.print_dict(Actor)
+>>>>>>> 45edcaff703f52b86aeed6a126a1df4f8f659db4
