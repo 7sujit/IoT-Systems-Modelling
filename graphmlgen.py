@@ -30,6 +30,7 @@ def generate_graphml(graph):
         for j in graph[i]:
         	f.write(create_edge('0', i, j , 'xx'))
     f.write(docEndTag)
+    f.close()
 
 
 
