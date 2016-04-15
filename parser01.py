@@ -1,11 +1,12 @@
 #!/usr/bin/python
 
-f = open('/home/sujit/Downloads/thermoclass(1).xmi','r');
+f = open('./test.xmi','r');
 
 s=[]
 t=[]
 UseCase = {}
 Actor = {}
+Adj={}
 
 for i in f:
     #   print  ' -********************'
@@ -83,3 +84,78 @@ for i in t:
     # print i[xmi_name_start + xmi_name_len: y+2]
 
 print 'actor : ',Actor
+
+
+
+type_len = len('type="')
+i=0
+
+#Adjacency list in Adj
+
+for gg in s:
+    #Simple association
+    if(gg.startswith('<UML:Association.connection>')):
+        p=0
+        q=0
+        #finding first node id
+        line = s[i+1]
+        start_first = line.find('type')
+        length = len(line)
+        p=start_first+type_len
+        while(p<length):
+            if(line[p] is ' '):
+                break
+            p+=1
+
+        #finding second node of association
+        line2 = s[i+2]
+        start_second = line2.find('type')
+        length = len(line2)
+        q = start_second +type_len
+        while(q<length):
+            if(line2[q] is ' '):
+                break
+            q+=1
+        #making adjacency list for undirected graph 
+        if(line[start_first+type_len:p-1] in Adj):
+            Adj[line[start_first+type_len:p-1]].append(line2[start_second+type_len:q-1])
+        else:
+            Adj[line[start_first+type_len:p-1]]=[line2[start_second+type_len:q-1]]
+
+        if(line2[start_second+type_len:q-1] in Adj):
+            Adj[line2[start_second+type_len:q-1]].append(line[start_first+type_len:p-1])
+        else:
+            Adj[line2[start_second+type_len:q-1]]=[line[start_first+type_len:p-1]]
+
+    #For dependency 
+    elif(gg.startswith('<UML:Dependency')):
+        p=0
+        q=0
+        #finding client of dependency
+        line = s[i]
+        start_first = line.find('client')
+        length = len(line)
+        client_len = len('client="')
+        p=start_first+client_len
+        while(p<length):
+            if(line[p] is ' '):
+                break
+            p+=1
+        #finding finding supplier of dependency 
+        start_second = line.find('supplier')
+        supplier_len = len('supplier="')
+        q = start_second +supplier_len
+        while(q<length):
+            if(line[q] is ' '):
+                break
+            q+=1
+        #for dependency only adding edge from client to supplier hence making only one entry in adjacency list i.e in client adjacency list
+        print "client "+line[start_first+client_len:p-1]
+        print "supplier "+line[start_second+supplier_len:q-1]
+        if(line[start_first+client_len:p-1] in Adj):
+            Adj[line[start_first+client_len:p-1]].append(line[start_second+supplier_len:q-1])
+        else:
+            Adj[line[start_first+client_len:p-1]]=[line[start_second+supplier_len:q-1]]
+    i+=1
+
+print 'Adjacency list: ',Adj
