@@ -17,18 +17,23 @@ def create_edge(edge_id, source_id, dest_id, edge_type):
     # edge type ??? not resolved yet
     return '<edge id="'+ edge_id +'" type="'+ edge_type +'" source="'+ source_id +'" target="'+ dest_id +'"/>\n'
 
-def generate_graphml(graph):
+def generate_graphml(graph,Actor,UseCase):
     f = open('./file.graphml','w');
+    eid = 1;
     if(f is None):
         print 'Error'
         return
     f.write(docHeaderTag)
     f.write(docStartTag)
     for i in graph.keys():
-        f.write(create_node(i, 'xxxx'))
+        if i in Actor:
+            f.write(create_node(i, Actor[i]))
+        else:
+            f.write(create_node(i, UseCase[i]))
     for i in graph.keys():
         for j in graph[i]:
-        	f.write(create_edge('0', i, j , 'xx'))
+            f.write(create_edge(str(eid), i, j , 'xx'))
+            eid = eid + 1
     f.write(docEndTag)
     f.close()
 
