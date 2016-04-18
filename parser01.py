@@ -120,7 +120,7 @@ for gg in s:
             if(line2[q] is ' '):
                 break
             q+=1
-        #making adjacency list for undirected graph 
+        #making adjacency list for undirected graph
         if(line[start_first+type_len:p-1] in Adj):
             Adj[line[start_first+type_len:p-1]].append(line2[start_second+type_len:q-1])
         else:
@@ -131,7 +131,7 @@ for gg in s:
         else:
             Adj[line2[start_second+type_len:q-1]]=[line[start_first+type_len:p-1]]
 
-    #For dependency 
+    #For dependency
     elif(gg.startswith('<UML:Dependency')):
         p=0
         q=0
@@ -145,7 +145,7 @@ for gg in s:
             if(line[p] is ' '):
                 break
             p+=1
-        #finding finding supplier of dependency 
+        #finding finding supplier of dependency
         start_second = line.find('supplier')
         supplier_len = len('supplier="')
         q = start_second +supplier_len
@@ -163,7 +163,9 @@ print ""
 print "*************************************"
 print 'Adjacency list: ',Adj
 print "*************************************"
+
 disp.print_dict(Actor)
 
 graphmlgen.generate_graphml(Adj,Actor,UseCase)
+
 
