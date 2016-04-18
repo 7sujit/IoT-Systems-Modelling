@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 docHeaderTag = '<?xml version="1.0" encoding="UTF-8"?>\n'
-docStartTag = '<graphml>\n'
+docStartTag = '<graphml \nxmlns="http://graphml.graphdrawing.org/xmlns" \nxmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\nxsi:schemaLocation="http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">\n'
 docEndTag = '</graphml>\n'
 
 
@@ -17,7 +17,7 @@ def create_edge(edge_id, source_id, dest_id, edge_type):
     # edge type ??? not resolved yet
     return '<edge id="'+ edge_id +'" type="'+ edge_type +'" source="'+ source_id +'" target="'+ dest_id +'"/>\n'
 
-def generate_graphml(graph):
+def generate_graphml(graph,Actor,Usecase):
     f = open('./file.graphml','w');
     if(f is None):
         print 'Error'
@@ -25,7 +25,10 @@ def generate_graphml(graph):
     f.write(docHeaderTag)
     f.write(docStartTag)
     for i in graph.keys():
-        f.write(create_node(i, 'xxxx'))
+        if(i in Actor):
+            f.write(create_node(i, Actor[i]))
+        else:
+            f.write(create_node(i,Usecase[i]))
     for i in graph.keys():
         for j in graph[i]:
         	f.write(create_edge('0', i, j , 'xx'))

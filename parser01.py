@@ -2,8 +2,9 @@
 
 # from printing import print_dict;
 import disp
+import graphmlgen
 
-f = open('./check.xmi','r');
+f = open('./Use.xmi','r');
 
 s=[]
 t=[]
@@ -163,4 +164,6 @@ print "*************************************"
 print 'Adjacency list: ',Adj
 print "*************************************"
 disp.print_dict(Actor)
+
+graphmlgen.generate_graphml(Adj,Actor,UseCase)
 

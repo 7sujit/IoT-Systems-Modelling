@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml 
+xmlns="http://graphml.graphdrawing.org/xmlns" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<node id="6ph5hH3tV14E" name="Increase Humidity"/>
+<node id="BFoEJ6lNvQTa" name="Decrease Humidity"/>
+<node id="KAivs5Kiyq3e" name="Micro controller"/>
+<node id="EG0DjlgAnre6" name="Decrease Temperature"/>
+<node id="uZfud1Z6NMZQ" name="Human"/>
+<node id="e4hcCi1S9t4T" name="Analyse data"/>
+<node id="Vg2Ke0H0EveW" name="Air conditioner"/>
+<node id="VMoT54aNEGI7" name="Environment"/>
+<node id="aj65j6iVftBa" name="Change in Actuator state"/>
+<node id="pvXNfXJABJVp" name="Sensor"/>
+<node id="R4BWKKXwODWY" name="Increase Temperature"/>
+<node id="kOSt0fQAuEOB" name="Turn on Alarm"/>
+<node id="ITubMuwwd0zK" name="Store Data on cloud"/>
+<edge id="0" type="xx" source="6ph5hH3tV14E" target="KAivs5Kiyq3e"/>
+<edge id="0" type="xx" source="6ph5hH3tV14E" target="uZfud1Z6NMZQ"/>
+<edge id="0" type="xx" source="6ph5hH3tV14E" target="aj65j6iVftBa"/>
+<edge id="0" type="xx" source="BFoEJ6lNvQTa" target="KAivs5Kiyq3e"/>
+<edge id="0" type="xx" source="BFoEJ6lNvQTa" target="uZfud1Z6NMZQ"/>
+<edge id="0" type="xx" source="BFoEJ6lNvQTa" target="aj65j6iVftBa"/>
+<edge id="0" type="xx" source="KAivs5Kiyq3e" target="pvXNfXJABJVp"/>
+<edge id="0" type="xx" source="KAivs5Kiyq3e" target="ITubMuwwd0zK"/>
+<edge id="0" type="xx" source="KAivs5Kiyq3e" target="R4BWKKXwODWY"/>
+<edge id="0" type="xx" source="KAivs5Kiyq3e" target="EG0DjlgAnre6"/>
+<edge id="0" type="xx" source="KAivs5Kiyq3e" target="6ph5hH3tV14E"/>
+<edge id="0" type="xx" source="KAivs5Kiyq3e" target="BFoEJ6lNvQTa"/>
+<edge id="0" type="xx" source="EG0DjlgAnre6" target="KAivs5Kiyq3e"/>
+<edge id="0" type="xx" source="EG0DjlgAnre6" target="uZfud1Z6NMZQ"/>
+<edge id="0" type="xx" source="EG0DjlgAnre6" target="aj65j6iVftBa"/>
+<edge id="0" type="xx" source="uZfud1Z6NMZQ" target="BFoEJ6lNvQTa"/>
+<edge id="0" type="xx" source="uZfud1Z6NMZQ" target="6ph5hH3tV14E"/>
+<edge id="0" type="xx" source="uZfud1Z6NMZQ" target="EG0DjlgAnre6"/>
+<edge id="0" type="xx" source="uZfud1Z6NMZQ" target="R4BWKKXwODWY"/>
+<edge id="0" type="xx" source="uZfud1Z6NMZQ" target="e4hcCi1S9t4T"/>
+<edge id="0" type="xx" source="e4hcCi1S9t4T" target="uZfud1Z6NMZQ"/>
+<edge id="0" type="xx" source="Vg2Ke0H0EveW" target="aj65j6iVftBa"/>
+<edge id="0" type="xx" source="VMoT54aNEGI7" target="pvXNfXJABJVp"/>
+<edge id="0" type="xx" source="aj65j6iVftBa" target="Vg2Ke0H0EveW"/>
+<edge id="0" type="xx" source="pvXNfXJABJVp" target="VMoT54aNEGI7"/>
+<edge id="0" type="xx" source="pvXNfXJABJVp" target="KAivs5Kiyq3e"/>
+<edge id="0" type="xx" source="R4BWKKXwODWY" target="KAivs5Kiyq3e"/>
+<edge id="0" type="xx" source="R4BWKKXwODWY" target="uZfud1Z6NMZQ"/>
+<edge id="0" type="xx" source="R4BWKKXwODWY" target="aj65j6iVftBa"/>
+<edge id="0" type="xx" source="kOSt0fQAuEOB" target="e4hcCi1S9t4T"/>
+<edge id="0" type="xx" source="kOSt0fQAuEOB" target="R4BWKKXwODWY"/>
+<edge id="0" type="xx" source="ITubMuwwd0zK" target="KAivs5Kiyq3e"/>
+</graphml>
