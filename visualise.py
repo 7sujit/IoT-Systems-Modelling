@@ -9,7 +9,8 @@ def draw_graph(_list):
     length = len(_list)
     print "length is %s\n" % length
     node_list = [item for item in _list] # item VARIABLE MUST BE A STRING
-    G.add_cycle(node_list);
+    G.add_edge(node_list[0], node_list[1]) # adding edges to the graph after nodelist
+    G.add_edge(node_list[1], node_list[2])
     pos = nx.circular_layout(G)
     draw_lifted(G, pos)     #DRAW LIFETED LABLES
 
@@ -23,5 +24,5 @@ def draw_lifted(G, pos=None, offset=0.1, fontsize=12):
     plt.show()
 
 if __name__ == '__main__':
-    array = [ str(i) for i in range(10)]
+    array = [ str(i) for i in range(3)]
     draw_graph(array)
