@@ -12,6 +12,7 @@ UseCase = {}
 Actor = {}
 Adj={}
 
+
 for i in f:
     #   print  ' -********************'
     #   print i
@@ -166,6 +167,5 @@ print "*************************************"
 
 disp.print_dict(Actor)
 
-graphmlgen.generate_graphml(Adj,Actor,UseCase)
-
-
+graphmlgen.generate_graphml(Adj,Actor,UseCase) # generating GraphML file
+# visua.draw_graph(node_list, node_pairs);

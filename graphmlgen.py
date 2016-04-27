@@ -1,21 +1,21 @@
 #!/usr/bin/python
 
-docHeaderTag = '<?xml version="1.0" encoding="UTF-8"?>\n'
-docStartTag = '<graphml \nxmlns="http://graphml.graphdrawing.org/xmlns" \nxmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\nxsi:schemaLocation="http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">\n'
+import visualise
+
 docEndTag = '</graphml>\n'
+beginTag = '<?xml version="1.0" ?>\n\t<graphml>\n\t\t<key attr.name="label" attr.type="string" id="label"/>\n'
+gStart = '<graph>'
+gEnd = '</graph>'
 
-
-"""
-    generate an adjacency list for the graph and later generate graphml tags and
-    form the document
-"""
+node_list = []
+node_pairs = []
 
 def create_node(node_id, node_name):
-    return '<node id="'+ node_id +'" name="'+ node_name +'"/>\n'
+    return '\t\t\t<node id="' + node_name+'"/>\n'
 
 def create_edge(edge_id, source_id, dest_id, edge_type):
     # edge type ??? not resolved yet
-    return '<edge id="'+ edge_id +'" type="'+ edge_type +'" source="'+ source_id +'" target="'+ dest_id +'"/>\n'
+    return '\t\t\t<edge directed="'+edge_type+'"  source="'+ source_id +'" target="'+ dest_id +'"/>\n'
 
 
 def generate_graphml(graph,Actor,UseCase):
@@ -24,9 +24,9 @@ def generate_graphml(graph,Actor,UseCase):
     if(f is None):
         print 'Error'
         return
-    f.write(docHeaderTag)
-    f.write(docStartTag)
+    f.write(beginTag);
     for i in graph.keys():
+        node_list.append(i)
         if(i in Actor):
             f.write(create_node(i, Actor[i]))
         else:
@@ -34,11 +34,17 @@ def generate_graphml(graph,Actor,UseCase):
 
     for i in graph.keys():
         for j in graph[i]:
-            f.write(create_edge(str(eid), i, j , 'xx'))
+            node_pairs.append((i,j));
+            f.write(create_edge(str(eid), i, j , 'false'))
             eid = eid + 1
+    f.write(gEnd)
     f.write(docEndTag)
     f.close()
-
+    visualise.draw_graph(node_list, node_pairs)
+    # for i in node_list:
+    #     print i
+    # for i in node_pairs:
+    #     print i
 
 
 def main():
