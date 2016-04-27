@@ -4,9 +4,8 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
-def draw_graph(node_list, node_pairs):
+def draw_graph(node_pairs):
     G = nx.Graph()
-    length = len(node_list)
     # print "length is %s\n" % length
     # node_list = [item for item in _list] # item VARIABLE MUST BE A STRING
     for item in node_pairs:

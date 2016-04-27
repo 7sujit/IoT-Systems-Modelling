@@ -9,6 +9,9 @@ gEnd = '</graph>'
 
 node_list = []
 node_pairs = []
+x=None
+y=None
+
 
 def create_node(node_id, node_name):
     return '\t\t\t<node id="' + node_name+'"/>\n'
@@ -26,21 +29,24 @@ def generate_graphml(graph,Actor,UseCase):
         return
     f.write(beginTag);
     for i in graph.keys():
-        node_list.append(i)
         if(i in Actor):
+            node_list.append(Actor[i])
             f.write(create_node(i, Actor[i]))
         else:
+            node_list.append(UseCase[i])
             f.write(create_node(i,UseCase[i]))
 
     for i in graph.keys():
         for j in graph[i]:
-            node_pairs.append((i,j));
+            x = Actor[i] if i in Actor else UseCase[i]
+            y = Actor[j] if j in Actor else UseCase[j]
+            node_pairs.append((x,y));
             f.write(create_edge(str(eid), i, j , 'false'))
             eid = eid + 1
     f.write(gEnd)
     f.write(docEndTag)
     f.close()
-    visualise.draw_graph(node_list, node_pairs)
+    visualise.draw_graph(node_pairs)
     # for i in node_list:
     #     print i
     # for i in node_pairs:
