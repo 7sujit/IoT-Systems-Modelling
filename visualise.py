@@ -15,7 +15,7 @@ def draw_graph(_list):
     draw_lifted(G, pos)     #DRAW LIFETED LABLES
 
 
-def draw_lifted(G, pos=None, offset=0.1, fontsize=12):
+def draw_lifted(G, pos=None, offset=0.1, fontsize=10):
     pos = nx.spring_layout(G) if pos is None else pos
     nx.draw(G, pos, font_size = fontsize, with_labels=False)
     for p in pos:
