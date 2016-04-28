@@ -7,9 +7,7 @@
 			<node id="Decrease Temperature"/>
 			<node id="Human"/>
 			<node id="Analyse data"/>
-			<node id="Air conditioner"/>
 			<node id="Environment"/>
-			<node id="Change in Actuator state of Air Conditioner"/>
 			<node id="Sensor"/>
 			<node id="Increase Temperature"/>
 			<node id="Turn on Alarm"/>
@@ -35,15 +33,12 @@
 			<edge directed="false"  source="uZfud1Z6NMZQ" target="R4BWKKXwODWY"/>
 			<edge directed="false"  source="uZfud1Z6NMZQ" target="e4hcCi1S9t4T"/>
 			<edge directed="false"  source="e4hcCi1S9t4T" target="uZfud1Z6NMZQ"/>
-			<edge directed="false"  source="Vg2Ke0H0EveW" target="aj65j6iVftBa"/>
 			<edge directed="false"  source="VMoT54aNEGI7" target="pvXNfXJABJVp"/>
-			<edge directed="false"  source="aj65j6iVftBa" target="Vg2Ke0H0EveW"/>
 			<edge directed="false"  source="pvXNfXJABJVp" target="VMoT54aNEGI7"/>
 			<edge directed="false"  source="pvXNfXJABJVp" target="KAivs5Kiyq3e"/>
 			<edge directed="false"  source="R4BWKKXwODWY" target="KAivs5Kiyq3e"/>
 			<edge directed="false"  source="R4BWKKXwODWY" target="uZfud1Z6NMZQ"/>
 			<edge directed="false"  source="R4BWKKXwODWY" target="aj65j6iVftBa"/>
-			<edge directed="false"  source="kOSt0fQAuEOB" target="e4hcCi1S9t4T"/>
 			<edge directed="false"  source="kOSt0fQAuEOB" target="R4BWKKXwODWY"/>
 			<edge directed="false"  source="ITubMuwwd0zK" target="KAivs5Kiyq3e"/>
 </graph></graphml>
