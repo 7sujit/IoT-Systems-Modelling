@@ -43,7 +43,7 @@
     </UML:Model>
     <UML:Model stereotype="folder" visibility="public" isSpecification="false" namespace="m1" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Use Case View" name="Use Case View">
      <UML:Namespace.ownedElement>
-      <UML:Actor visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Vg2Ke0H0EveW" name="Air conditioner"/>
+      // <UML:Actor visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="Vg2Ke0H0EveW" name="Air conditioner"/>
       <UML:Actor visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="pvXNfXJABJVp" name="Sensor"/>
       <UML:Actor visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="KAivs5Kiyq3e" name="Micro controller"/>
       <UML:Actor visibility="public" isSpecification="false" namespace="Use Case View" isAbstract="false" isLeaf="false" isRoot="false" xmi.id="VMoT54aNEGI7" name="Environment"/>
@@ -299,7 +299,7 @@
      </listitem>
     </listitem>
     <listitem open="1" type="802" id="Use Case View">
-     <listitem open="1" type="811" id="Vg2Ke0H0EveW"/>
+    //  <listitem open="1" type="811" id="Vg2Ke0H0EveW"/>
      <listitem open="1" type="812" id="e4hcCi1S9t4T"/>
      <listitem open="1" type="812" id="aj65j6iVftBa"/>
      <listitem open="1" type="812" id="BFoEJ6lNvQTa"/>
