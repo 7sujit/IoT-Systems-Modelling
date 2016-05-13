@@ -13,12 +13,8 @@ Actor = {}
 Adj={}
 
 
-for i in f:
-    #   print  ' -********************'
-    #   print i
+for i in f: # formats the strings of .xmi file after reading it line by line
       s.append(' '.join(i.split()))
-    #   print ' '.join(i.split())
-
 
 ## SCANNING THROUGH "<UML:UseCase"
 for i in s:
@@ -27,13 +23,16 @@ for i in s:
 
 xmi_id_len = len('xmi.id="')
 xmi_name_len = len('name="')
-# xmi_name_start = t[0].find('name="')
 
 z = 0
 y=0
 p=0
 q=0
 
+"""
+    The for loop below creates 'UseCase' dictionaries for the use-cases in the
+    UML by parsing the .xmi file.
+"""
 for i in t:
     xmi_name_start = i.find('name="')
     l = len(i)
@@ -69,6 +68,11 @@ y = 0
 p = 0
 q = 0
 
+
+"""
+    The for loop below creates 'Actor' dictionaries for the actors in the
+    UML by parsing the .xmi file.
+"""
 for i in t:
     xmi_name_start = i.find('name="')
     l = len(i)

@@ -2,13 +2,19 @@
 
 import visualise
 
+
+"""
+    Predefined GraphML document tags to be appended and prepended in the document
+    before and after generating the body of the graphml file.
+"""
 docEndTag = '</graphml>\n'
 beginTag = '<?xml version="1.0" ?>\n\t<graphml>\n\t\t<key attr.name="label" attr.type="string" id="label"/>\n'
 gStart = '<graph>'
 gEnd = '</graph>'
 
 node_list = []
-node_pairs = []
+node_pairs = [] # This stores the node pairs defining one edges both directed or undirected
+# temporary variables
 x=None
 y=None
 
