@@ -4,4 +4,4 @@
 #### matplotlib Python library
 #### networkx Python library
 
-#### to run this file execute parser01.py
+#### to run this file execute parser.py
