@@ -169,4 +169,3 @@ disp.print_dict(Adj) # prints the adjacency list dictionary of the graph
 
 
 graphmlgen.generate_graphml(Adj,Actor,UseCase) # generating GraphML file
-# visua.draw_graph(node_list, node_pairs);

@@ -47,11 +47,11 @@ def generate_graphml(graph,Actor,UseCase):
     f.write(docEndTag)
     f.close()
     visualise.draw_graph(Actor,UseCase,node_pairs)
-    
+
 
 
 def main():
-    print 'Python Module for GraphML file generator'
+    print 'Python Module for GraphML file generator, execute parser01.py to run this program'
 
 if __name__ == '__main__':
     main()
