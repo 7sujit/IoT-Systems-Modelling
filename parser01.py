@@ -4,7 +4,7 @@
 import disp
 import graphmlgen
 
-f = open('./Use.xmi','r');
+f = open('./newUse.xmi','r');
 
 s=[]
 t=[]
@@ -53,7 +53,7 @@ for i in t:
     UseCase[i[xmi_id_start+xmi_id_len :z-1]] = i[xmi_name_start + xmi_name_len: y ]
     # print i[xmi_name_start + xmi_name_len: y+2]
 
-
+print "*************** UseCase dictionary ****************"
 disp.print_dict(UseCase)
 
 t = []
@@ -65,9 +65,9 @@ for i in s:
 ####### producing ACTOR dependecy
 
 z = 0
-y=0
-p=0
-q=0
+y = 0
+p = 0
+q = 0
 
 for i in t:
     xmi_name_start = i.find('name="')
@@ -86,17 +86,19 @@ for i in t:
             break
         q = q + 1
     Actor[i[xmi_id_start+xmi_id_len :z-1]] = i[xmi_name_start + xmi_name_len: y ]
-    # print i[xmi_name_start + xmi_name_len: y+2]
 
-print 'actor : ',Actor
-
-
+print '########### Printing Actor dictionary #########'
+disp.print_dict(Actor) # prints Actor dictionary
 
 type_len = len('type="')
 i=0
 
-#Adjacency list in Adj
-
+"""
+    The following 'for' loop generates adjacency list representation
+    of the graph and puts it into 'Adj' dictionary in python. which is latter
+    pased to 'generate_graphml' function of 'graphmlgen' module for generating
+    GraphML file.
+"""
 for gg in s:
     #Simple association
     if(gg.startswith('<UML:Association.connection>')):
@@ -160,12 +162,11 @@ for gg in s:
         else:
             Adj[line[start_first+client_len:p-1]]=[line[start_second+supplier_len:q-1]]
     i+=1
-print ""
-print "*************************************"
-print 'Adjacency list: ',Adj
-print "*************************************"
 
-disp.print_dict(Actor)
+
+print "***************PRINTING GRAPH Adjacency List****************"
+disp.print_dict(Adj) # prints the adjacency list dictionary of the graph
+
 
 graphmlgen.generate_graphml(Adj,Actor,UseCase) # generating GraphML file
 # visua.draw_graph(node_list, node_pairs);

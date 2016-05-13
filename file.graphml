@@ -1,44 +1,44 @@
 <?xml version="1.0" ?>
 	<graphml>
 		<key attr.name="label" attr.type="string" id="label"/>
-			<node id="Increase Humidity"/>
-			<node id="Decrease Humidity"/>
-			<node id="Micro controller"/>
-			<node id="Decrease Temperature"/>
-			<node id="Human"/>
-			<node id="Analyse data"/>
 			<node id="Environment"/>
+			<node id="Human"/>
+			<node id="increase humidity"/>
+			<node id="analyse data"/>
+			<node id="store data on cloud"/>
+			<node id="decrease humidity"/>
+			<node id="increase temperature"/>
 			<node id="Sensor"/>
-			<node id="Increase Temperature"/>
-			<node id="Turn on Alarm"/>
-			<node id="Store Data on cloud"/>
-			<edge directed="false"  source="6ph5hH3tV14E" target="KAivs5Kiyq3e"/>
-			<edge directed="false"  source="6ph5hH3tV14E" target="uZfud1Z6NMZQ"/>
-			<edge directed="false"  source="6ph5hH3tV14E" target="aj65j6iVftBa"/>
-			<edge directed="false"  source="BFoEJ6lNvQTa" target="KAivs5Kiyq3e"/>
-			<edge directed="false"  source="BFoEJ6lNvQTa" target="uZfud1Z6NMZQ"/>
-			<edge directed="false"  source="BFoEJ6lNvQTa" target="aj65j6iVftBa"/>
-			<edge directed="false"  source="KAivs5Kiyq3e" target="pvXNfXJABJVp"/>
-			<edge directed="false"  source="KAivs5Kiyq3e" target="ITubMuwwd0zK"/>
-			<edge directed="false"  source="KAivs5Kiyq3e" target="R4BWKKXwODWY"/>
-			<edge directed="false"  source="KAivs5Kiyq3e" target="EG0DjlgAnre6"/>
-			<edge directed="false"  source="KAivs5Kiyq3e" target="6ph5hH3tV14E"/>
-			<edge directed="false"  source="KAivs5Kiyq3e" target="BFoEJ6lNvQTa"/>
-			<edge directed="false"  source="EG0DjlgAnre6" target="KAivs5Kiyq3e"/>
-			<edge directed="false"  source="EG0DjlgAnre6" target="uZfud1Z6NMZQ"/>
-			<edge directed="false"  source="EG0DjlgAnre6" target="aj65j6iVftBa"/>
-			<edge directed="false"  source="uZfud1Z6NMZQ" target="BFoEJ6lNvQTa"/>
-			<edge directed="false"  source="uZfud1Z6NMZQ" target="6ph5hH3tV14E"/>
-			<edge directed="false"  source="uZfud1Z6NMZQ" target="EG0DjlgAnre6"/>
-			<edge directed="false"  source="uZfud1Z6NMZQ" target="R4BWKKXwODWY"/>
-			<edge directed="false"  source="uZfud1Z6NMZQ" target="e4hcCi1S9t4T"/>
-			<edge directed="false"  source="e4hcCi1S9t4T" target="uZfud1Z6NMZQ"/>
-			<edge directed="false"  source="VMoT54aNEGI7" target="pvXNfXJABJVp"/>
-			<edge directed="false"  source="pvXNfXJABJVp" target="VMoT54aNEGI7"/>
-			<edge directed="false"  source="pvXNfXJABJVp" target="KAivs5Kiyq3e"/>
-			<edge directed="false"  source="R4BWKKXwODWY" target="KAivs5Kiyq3e"/>
-			<edge directed="false"  source="R4BWKKXwODWY" target="uZfud1Z6NMZQ"/>
-			<edge directed="false"  source="R4BWKKXwODWY" target="aj65j6iVftBa"/>
-			<edge directed="false"  source="kOSt0fQAuEOB" target="R4BWKKXwODWY"/>
-			<edge directed="false"  source="ITubMuwwd0zK" target="KAivs5Kiyq3e"/>
+			<node id="Micro controller"/>
+			<node id="turn on alarm"/>
+			<node id="decrease temperature"/>
+			<edge directed="false"  source="ppp4uEmPIGhH" target="9GotBfo1Se5M"/>
+			<edge directed="false"  source="EBWudQZj116S" target="OIAncC4Q1IZa"/>
+			<edge directed="false"  source="EBWudQZj116S" target="nQDKJjwbyLqA"/>
+			<edge directed="false"  source="EBWudQZj116S" target="IFRHETSqVRj8"/>
+			<edge directed="false"  source="EBWudQZj116S" target="e11uft1yXFN7"/>
+			<edge directed="false"  source="EBWudQZj116S" target="KeEPaaqyq1jR"/>
+			<edge directed="false"  source="IFRHETSqVRj8" target="8dSNR4pYIbPT"/>
+			<edge directed="false"  source="IFRHETSqVRj8" target="EBWudQZj116S"/>
+			<edge directed="false"  source="IFRHETSqVRj8" target="83blE1BxSI1i"/>
+			<edge directed="false"  source="OIAncC4Q1IZa" target="EBWudQZj116S"/>
+			<edge directed="false"  source="jT94GwRS5xMg" target="8dSNR4pYIbPT"/>
+			<edge directed="false"  source="nQDKJjwbyLqA" target="8dSNR4pYIbPT"/>
+			<edge directed="false"  source="nQDKJjwbyLqA" target="EBWudQZj116S"/>
+			<edge directed="false"  source="nQDKJjwbyLqA" target="83blE1BxSI1i"/>
+			<edge directed="false"  source="KeEPaaqyq1jR" target="8dSNR4pYIbPT"/>
+			<edge directed="false"  source="KeEPaaqyq1jR" target="EBWudQZj116S"/>
+			<edge directed="false"  source="KeEPaaqyq1jR" target="83blE1BxSI1i"/>
+			<edge directed="false"  source="9GotBfo1Se5M" target="ppp4uEmPIGhH"/>
+			<edge directed="false"  source="9GotBfo1Se5M" target="8dSNR4pYIbPT"/>
+			<edge directed="false"  source="8dSNR4pYIbPT" target="9GotBfo1Se5M"/>
+			<edge directed="false"  source="8dSNR4pYIbPT" target="jT94GwRS5xMg"/>
+			<edge directed="false"  source="8dSNR4pYIbPT" target="nQDKJjwbyLqA"/>
+			<edge directed="false"  source="8dSNR4pYIbPT" target="IFRHETSqVRj8"/>
+			<edge directed="false"  source="8dSNR4pYIbPT" target="e11uft1yXFN7"/>
+			<edge directed="false"  source="8dSNR4pYIbPT" target="KeEPaaqyq1jR"/>
+			<edge directed="false"  source="opEBZU3hVcQj" target="nQDKJjwbyLqA"/>
+			<edge directed="false"  source="e11uft1yXFN7" target="8dSNR4pYIbPT"/>
+			<edge directed="false"  source="e11uft1yXFN7" target="EBWudQZj116S"/>
+			<edge directed="false"  source="e11uft1yXFN7" target="83blE1BxSI1i"/>
 </graph></graphml>

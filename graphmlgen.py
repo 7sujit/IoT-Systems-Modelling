@@ -47,10 +47,7 @@ def generate_graphml(graph,Actor,UseCase):
     f.write(docEndTag)
     f.close()
     visualise.draw_graph(Actor,UseCase,node_pairs)
-    # for i in node_list:
-    #     print i
-    # for i in node_pairs:
-    #     print i
+    
 
 
 def main():
